@@ -2,7 +2,7 @@ package com.iu.ksg1;
 
 import java.util.Scanner;
 
-public class Study3_ex2 {
+public class Study3_sw_ex2 {
 
 	public static void main(String[] args) {
 		

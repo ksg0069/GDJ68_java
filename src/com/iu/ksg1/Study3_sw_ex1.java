@@ -2,7 +2,7 @@ package com.iu.ksg1;
 
 import java.util.Scanner;
 
-public class Study3_ex1 {
+public class Study3_sw_ex1 {
 
 	public static void main(String[] args) {
 		//국어, 영어, 수학 입력

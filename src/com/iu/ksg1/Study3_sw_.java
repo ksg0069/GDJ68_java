@@ -1,6 +1,6 @@
 package com.iu.ksg1;
 
-public class Study_3 {
+public class Study3_sw_ {
 
 	public static void main(String[] args) {
 		//switch case
