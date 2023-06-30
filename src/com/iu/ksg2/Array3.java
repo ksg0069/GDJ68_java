@@ -26,14 +26,13 @@ public class Array3 {
 			
 			copyNums[i] = nums[i];
 		}
-		nums=copyNums;
+		 nums=copyNums;
 		
 		for(int i=0; i<nums.length;i++) {
 			System.out.println(nums[i]);
 		}
 		
 		
-		System.out.println("추가할 번호를 입력하세요");
 
 	}
 
