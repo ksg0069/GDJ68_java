@@ -4,6 +4,25 @@ import java.util.Scanner;
 
 public class StudentService {
 	
+	public Student findByNum(Student[] students) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("찾으려고하는 학생의 번호를 입력하세요");
+		int num = sc.nextInt();
+		
+		Student student= null;
+		
+		for(int i=0; i<students.length; i++) {
+			
+			if(num==students[i].getNum()) {
+				student = students[i];
+				break;
+			}
+		}
+
+		return student;
+	}
+	
 	public Student makeStudent1() {
 		//학생 1명 만들어서 이름, 번호, 국어, 영어, 수학
 		//총점 평균 계산
@@ -14,18 +33,17 @@ public class StudentService {
 		Student s1 = new Student();
 		
 		System.out.println("이름 입력");
-		s1.name=sc.next();
+		s1.setName(sc.next());
 		System.out.println("번호 입력");
-		s1.num=sc.nextInt();
+		s1.setNum(sc.nextInt());
 		System.out.println("국어점수 입력");
-		s1.kor=sc.nextInt();
+		s1.setKor(sc.nextInt());
 		System.out.println("영어점수 입력");
-		s1.eng=sc.nextInt();
+		s1.setEng(sc.nextInt());
 		System.out.println("수학점수 입력");
-		s1.math=sc.nextInt();
+		s1.setMath(sc.nextInt());
 		
-		s1.total = s1.kor+s1.eng+s1.math;
-		s1.avg = s1.total/3.0;
+		s1.cal();
 		
 		
 		return s1;
@@ -51,7 +69,7 @@ public class StudentService {
 		System.out.println("학생수 입력");
 		int stuNum = sc.nextInt();
 		
-		Student[] st = new Student[stuNum];
+		Student[] students = new Student[stuNum];
 		
 		
 		for(int i=0; i<stuNum; i++) {
@@ -60,26 +78,28 @@ public class StudentService {
 			Student s1 = new Student();
 			
 			System.out.println("이름 입력");
-			s1.name=sc.next();
+			s1.setName(sc.next());
 			System.out.println("번호 입력");
-			s1.num=sc.nextInt();
+			s1.setNum(sc.nextInt());
 			System.out.println("국어점수 입력");
-			s1.kor=sc.nextInt();
+			s1.setKor(sc.nextInt());
 			System.out.println("영어점수 입력");
-			s1.eng=sc.nextInt();
+			s1.setEng(sc.nextInt());
 			System.out.println("수학점수 입력");
-			s1.math=sc.nextInt();
+			s1.setMath(sc.nextInt());
 			
-			s1.total = s1.kor+s1.eng+s1.math;
-			s1.avg = s1.total/3;
+			s1.cal();
+//			s1.total = s1.kor+s1.eng+s1.math;
+//			s1.avg = s1.total/3;
 			
 		
-			st[i]=s1;
+			students[i]=s1;
+			
 			
 			
 		 }
 		
-		return st;
+		return students;
 	}
 	
 	
