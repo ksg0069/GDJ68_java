@@ -2,7 +2,7 @@ package com.iu.ksg3.s3;
 
 public class Car {
 	
-	String company; //제조회사
+	String company; //제조회사, default
 	String brand;
 	public String color;
 	int price=9885;
